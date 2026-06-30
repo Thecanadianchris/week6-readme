@@ -35,3 +35,16 @@ class Questions:
             message="Choose a license:",
             choices=self.LICENSE_OPTIONS,
         ).execute()
+
+
+        answers["author"] = inquirer.text(
+            message="Author name:"
+        ).execute()
+
+
+        answers["contact"] = inquirer.text(
+            message="Contact information (email/GitHub):"
+        ).execute()
+
+
+        return answers

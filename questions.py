@@ -11,7 +11,7 @@ class Questions:
         
         answers = {}
 
-        answers["title"] = inquirer.text(
+        answers["projectTitle"] = inquirer.text(
             message="Project title:"
         ).execute()   
 

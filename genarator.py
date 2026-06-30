@@ -11,10 +11,39 @@ class ReadmeGenerator:
 # Description
 
 {a['description']}
-S
+
+
+
+# Installation
+
+{a['installation']}
+
+
+# Usage
+
+{a['usage']}
+
+
+# License
+
+This project is licensed under the {a['license']} license.
+
+
+# Author
+
+{a['author']}
+
+
+# Contact
 
 {a['contact']}
 """
         
 
         return markdown
+    
+    def write_file(self, filename="README.md"):
+        content = self.build_markdown()
+        with open(filename, "w") as f:
+            f.write(content)
+        print(f"\n {filename} has been generated!")
